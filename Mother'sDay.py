@@ -1,0 +1,15 @@
+import pygame
+from time import sleep
+pygame.init()
+window = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
+sleep(5)
+pygame.mixer.init()
+pygame.mixer.music.load('./Assets/Mom.mpeg')
+pygame.mixer.music.play()
+sleep(45)
+image = pygame.image.load('./Assets/MD.jpg')
+print("Height of image= " + str(image.get_height()))
+print("Width of image= " + str(image.get_width()))
+window.blit(image,(0,0))
+pygame.display.update()
+sleep(5)
